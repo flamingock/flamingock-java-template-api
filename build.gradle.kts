@@ -7,16 +7,16 @@ plugins {
 
 
 group = "io.flamingock"
-version = "1.3.0"
+version = "1.3.1"
 
 repositories {
     mavenLocal()
     mavenCentral()
 }
 
-val generalUtilVersion = "1.3.0"
+val generalUtilVersion = "1.4.0"
 dependencies {
-    implementation("io.flamingock:flamingock-general-util:$generalUtilVersion")
+    api("io.flamingock:flamingock-general-util:$generalUtilVersion")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
     testImplementation("org.mockito:mockito-inline:4.11.0")
