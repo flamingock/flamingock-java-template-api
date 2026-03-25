@@ -7,14 +7,14 @@ plugins {
 
 
 group = "io.flamingock"
-version = "1.3.0-SNAPSHOT"
+version = "1.3.2-SNAPSHOT"
 
 repositories {
     mavenLocal()
     mavenCentral()
 }
 
-val generalUtilVersion = "1.3.0"
+val generalUtilVersion = "1.5.1"
 dependencies {
     implementation("io.flamingock:flamingock-general-util:$generalUtilVersion")
 
