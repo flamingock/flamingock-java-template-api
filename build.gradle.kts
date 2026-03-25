@@ -1,3 +1,6 @@
+import io.flamingock.build.VersionManager
+import io.flamingock.build.PrintVersionTask
+
 plugins {
     `java-library`
     `maven-publish`
@@ -7,7 +10,8 @@ plugins {
 
 
 group = "io.flamingock"
-version = "1.3.2-SNAPSHOT"
+val declaredVersion = "1.3.2-SNAPSHOT"
+version = VersionManager.resolveVersion(declaredVersion, project.hasProperty("release"))
 
 repositories {
     mavenLocal()
@@ -242,3 +246,5 @@ tasks.register("createStagingDeployFolder") {
 tasks.matching { it.name == "publish" }.configureEach {
     finalizedBy("createStagingDeployFolder")
 }
+
+tasks.register<PrintVersionTask>("printVersion")
