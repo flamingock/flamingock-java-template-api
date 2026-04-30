@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-val generalUtilVersion = "1.5.1"
+val generalUtilVersion = "1.5.3"
 dependencies {
     implementation("io.flamingock:flamingock-general-util:$generalUtilVersion")
 
